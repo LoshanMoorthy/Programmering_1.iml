@@ -5,6 +5,7 @@ public class Ex7Test {
         int[] a = {1, 2, 3, 4};
         System.out.println(Arrays.toString(switchArr(a)));
         System.out.println(Arrays.toString(evenToZero(a)));
+        System.out.println(ascending(a));
     }
 
     public static int[] switchArr(int[] arr) {
@@ -23,5 +24,13 @@ public class Ex7Test {
             }
         }
         return arr;
+    }
+
+    public static boolean ascending(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i] > arr[i + 1])
+                return false;
+        }
+        return true;
     }
 }
