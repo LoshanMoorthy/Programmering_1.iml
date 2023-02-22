@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Exercise5 {
     public static void main(String[] args) {
-       // System.out.println("The number of even numbers " + countEvenArr(new int[]{1, 2, 3, 4}));
+        // System.out.println("The number of even numbers " + countEvenArr(new int[]{1, 2, 3, 4}));
         // System.out.println("The number of odd numbers " + countOddArr(new int[]{1, 2, 3, 4}));
 
         Scanner sc = new Scanner(System.in);

@@ -4,10 +4,10 @@ import java.util.concurrent.ForkJoinPool;
 public class Ex7Test {
     public static void main(String[] args) {
         int[] a = {1, 2, 3, 4};
-//        System.out.println(Arrays.toString(switchArr(a)));
-//        System.out.println(Arrays.toString(evenToZero(a)));
-//        System.out.println(ascending(a));
-//        System.out.println(findSecondLargestElement(a));
+        System.out.println(Arrays.toString(switchArr(a)));
+        System.out.println(Arrays.toString(evenToZero(a)));
+        System.out.println(ascending(a));
+        System.out.println(findSecondLargestElement(a));
         System.out.println(Arrays.toString(rotateRight(a)));
         System.out.println(checkDoublets(a));
     }

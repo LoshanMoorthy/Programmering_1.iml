@@ -4,10 +4,13 @@ public class ArrayTest {
 
     static double[] t2 = new double[]{4.1, 4.3};
     public static void main(String[] args) {
-        System.out.println("Sum of given integer array is " + sum(new int[]{4, 6, 7, 2, 3}));
-        System.out.println("Sum of each element in 2 given arrays is " + Arrays.toString(sumArrays(new int[]{4, 6, 7, 2, 3}, new int[]{4, 6, 8, 2, 6})));
+        int[] a = {4, 6, 7, 2, 3};
+        int[] b = {4, 6, 8, 2, 6};
+        int[] c = {4, 6, 1, 2, 2};
+        System.out.println("Sum of given integer array is " + sum(a));
+        System.out.println("Sum of each element in 2 given arrays is " + Arrays.toString(sumArrays(a, b)));
         System.out.println("Sum of each element in 2 uneven given arrays is " + Arrays.toString(sumUnevenArrays(new int[]{1, 2, 3}, new int[]{3, 2})));
-        System.out.println("Is this an uneven array? " + hasUneven(new int[]{4, 6, 1, 2, 2}));
+        System.out.println("Is this an uneven array? " + hasUneven(c));
     }
 
     public static int sum(int[] t) {
