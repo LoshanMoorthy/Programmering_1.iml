@@ -14,9 +14,9 @@ public class E7_26 {
             a[i] = in.nextInt();
         }
         if (isSorted(a))
-            System.out.println("The list is ascending");
+            System.out.println("The list is sorted");
         else
-            System.out.println("The list is not ascending");
+            System.out.println("The list is not sorted");
 
     }
 
