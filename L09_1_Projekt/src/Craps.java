@@ -1,87 +1,63 @@
-import java.util.Arrays;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class Craps {
 
-//    public static int playerPoint = 0;
+    private static final Scanner sc = new Scanner(System.in);
+    public static int die1 = 0;
+    public static int die2 = 0;
+    public static boolean winLose = false;
 
     public static void main(String[] args) {
-        System.out.println("Welcome to the game of Craps");
-        printRules();
-        System.out.println();
-
         playCraps();
-
-        System.out.println();
-        System.out.println("Thank you for playing RollTwoDice");
     }
 
-    private static void printRules() {
-        System.out.println("=====================================================");
-        System.out.println("Rules of craps:");
-        System.out.println("The first roll is called the 'come out roll'. The player wins immediately if the first roll is a 7\n" +
-                "or 11, and loses immediately if the first roll is a 2, 3 or 12. If the player's first roll is\n" +
-                "4, 5, 6, 8, 9 or 10, this number is established as the player's 'point'. The player then continues to\n" +
-                "throw until he either throws his 'point' again or throws a 7. If he throws a 7, he has lost. He throws\n" +
-                "his 'point', he has won.");
-        System.out.println("=====================================================");
-    }
-
-    private static int[] rollDice() {
-        int[] dice = new int[2];
+    public static int sumOfTwoDice() {
         Random random = new Random();
-        for (int i = 0; i < dice.length; i++) {
-            dice[i] = random.nextInt(6) + 1;
-        }
-        return dice;
+        die1 = random.nextInt(6) + 1;
+        die2 = random.nextInt(6) + 1;
+
+        return die1 + die2;
     }
 
-    private static void playCraps() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Roll? ('no' stops) ");
-        String answer = scanner.nextLine();
-        while (!answer.equals("no")) {
-            int[] faces = rollDice();
-            System.out.println("Eyes: " + Arrays.toString(faces));
-            System.out.println();
+    public static void playCraps() {
+        System.out.print("To play craps press [Enter]");
+        sc.nextLine();
+        int firstThrow = sumOfTwoDice();
 
-            int faceSum = faces[0] + faces[1];
-            if (faceSum == 7 || faceSum == 12) {
-                System.out.println("Congrats, you won!");
-            } else if (faceSum == 2 || faceSum == 3 || faceSum == 11) {
-                System.out.println("Too bad, you lost on your first throw");
+        if (firstThrow == 7 || firstThrow == 11) {
+            System.out.println("You rolled " + firstThrow + ". You win!");
+        } else if (firstThrow == 2 || firstThrow == 3 || firstThrow == 12) {
+            System.out.println("You rolled " + firstThrow + ". You lose...");
+        } else {
+            System.out.println("You rolled " + firstThrow + " and your point is " + firstThrow + ".");
+            boolean pointRolled = rollForPoint(firstThrow);
+            if (pointRolled) {
+                System.out.println("You rolled your point, and you won!");
             } else {
-              if (rollForPoint(faceSum)) {
-                  System.out.println("You won!");
-              } else {
-                  System.out.println("You lost...");
-              }
+                System.out.println("You rolled 7, which means you lost...");
             }
-            System.out.print("Roll? ('no' stops) ");
-            answer = scanner.nextLine();
         }
-        scanner.close();
+
+        System.out.println("Press [Enter] to quit or write 'y' to play again");
+        String input = sc.nextLine();
+
+        if (input.equalsIgnoreCase("y")) {
+            playCraps();
+        }
     }
 
     public static boolean rollForPoint(int point) {
-        int[] faces;
-        int faceSum;
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Roll again?");
+        System.out.print("Press [Enter] to throw again");
         sc.nextLine();
-        while (true) {
-            faces = rollDice();
-            faceSum = faces[0] + faces[1];
-            System.out.println("Eyes: " + Arrays.toString(faces));
-            System.out.println();
-            if (faceSum == point) {
-                return true;
-            } else if (faceSum == 7) {
-                return false;
-            }
-            System.out.print("Roll again? ");
+        int roll = sumOfTwoDice();
+
+        while(point != roll && roll != 7) {
+            System.out.println("You rolled " + roll + " and your point is " + point);
+            System.out.println("Enter to roll again");
             sc.nextLine();
+            roll = sumOfTwoDice();
         }
+
+        return roll == point;
     }
 }

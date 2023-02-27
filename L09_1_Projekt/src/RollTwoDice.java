@@ -58,9 +58,6 @@ public class RollTwoDice {
     private static void updateStatistics(int[] faces) {
         rollCount++;
         int facesSum = faces[0] + faces[1];
-//        for (int i = 0; i < faces.length; i++) {
-//            eyesSum += faces[i];
-//        }
         eyesSum += facesSum;
         if (faces[0] == faces[1])
             totalPair++;
