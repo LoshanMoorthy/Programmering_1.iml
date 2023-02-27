@@ -5,9 +5,9 @@ public class Craps {
     private static final Scanner sc = new Scanner(System.in);
     public static int die1 = 0;
     public static int die2 = 0;
-    public static boolean winLose = false;
 
     public static void main(String[] args) {
+        rules();
         playCraps();
     }
 
@@ -40,7 +40,6 @@ public class Craps {
 
         System.out.println("Press [Enter] to quit or write 'y' to play again");
         String input = sc.nextLine();
-
         if (input.equalsIgnoreCase("y")) {
             playCraps();
         }
@@ -57,7 +56,19 @@ public class Craps {
             sc.nextLine();
             roll = sumOfTwoDice();
         }
-
         return roll == point;
+    }
+
+    public static void rules() {
+        System.out.println("Welcome to the game of Craps");
+        System.out.println();
+        System.out.println("========================================================================================================");
+        System.out.println("Det første kast kaldes ‘come out roll’. Spilleren vinder med det samme, hvis det første kast er 7 \n" +
+                "eller 11, og taber med det samme, hvis det første kast er 2, 3 eller 12. Hvis spillerens første kast er \n" +
+                "4, 5, 6, 8, 9 eller 10, etableres dette tal som spillerens ‘point’. Spilleren bliver derefter ved med at \n" +
+                "kaste, indtil han enten kaster sit ‘point’ igen eller kaster 7. Kaster han 7, har han tabt. Kaster han \n" +
+                "sit ’point’, har han vundet.");
+        System.out.println("========================================================================================================");
+        System.out.println();
     }
 }
