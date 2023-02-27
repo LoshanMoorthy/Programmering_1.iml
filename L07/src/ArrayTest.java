@@ -21,7 +21,7 @@ public class ArrayTest {
         return sum;
     }
 
-    public static double sumArr(double[] t) {
+    public static double sumDoubleArr(double[] t) {
         double sum = 0;
         for (double v : t) {
             sum += v;
@@ -40,20 +40,18 @@ public class ArrayTest {
     public static int[] sumUnevenArrays(int[] a, int[] b) {
         int[] c = new int[(int) Math.max(a.length, b.length)];
         for (int i = 0; i < c.length; i++) {
-            if (a.length > i) {
+            if (a.length > i)
                 c[i] += a[i];
-            } if (b.length > i) {
+              if (b.length > i)
                 c[i] += b[i];
-            }
         }
         return c;
     }
 
     public static boolean hasUneven(int[] t) {
         for (int i = 0; i < t.length; i++) {
-            if (t[i] % 2 != 0) {
+            if (t[i] % 2 != 0)
                 return true;
-            }
         }
         return false;
     }
