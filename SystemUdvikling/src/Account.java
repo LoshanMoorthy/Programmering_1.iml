@@ -13,15 +13,13 @@ public class Account {
     }
 
     public void insertAmount(int amount) {
-        if (status.equals("Open")) {
+        if (status.equals("Open"))
             balance += amount;
-        }
     }
 
     public void withdrawAmount(int amount) {
-        if (status.equals("Open") && balance > 0) {
+        if (status.equals("Open") && balance > 0)
             balance -= amount;
-        }
     }
 
     public int getBalance() {
