@@ -3,8 +3,6 @@ import java.util.*;
 public class Craps {
 
     private static final Scanner sc = new Scanner(System.in);
-    public static int die1 = 0;
-    public static int die2 = 0;
 
     public static void main(String[] args) {
         rules();
@@ -13,8 +11,8 @@ public class Craps {
 
     public static int sumOfTwoDice() {
         Random random = new Random();
-        die1 = random.nextInt(6) + 1;
-        die2 = random.nextInt(6) + 1;
+        int die1 = random.nextInt(6) + 1;
+        int die2 = random.nextInt(6) + 1;
 
         return die1 + die2;
     }
@@ -40,6 +38,7 @@ public class Craps {
 
         System.out.println("Press [Enter] to quit or write 'y' to play again");
         String input = sc.nextLine();
+
         if (input.equalsIgnoreCase("y")) {
             playCraps();
         }
@@ -63,12 +62,13 @@ public class Craps {
         System.out.println("Welcome to the game of Craps");
         System.out.println();
         System.out.println("========================================================================================================");
-        System.out.println("Det første kast kaldes ‘come out roll’. Spilleren vinder med det samme, hvis det første kast er 7 \n" +
-                "eller 11, og taber med det samme, hvis det første kast er 2, 3 eller 12. Hvis spillerens første kast er \n" +
-                "4, 5, 6, 8, 9 eller 10, etableres dette tal som spillerens ‘point’. Spilleren bliver derefter ved med at \n" +
-                "kaste, indtil han enten kaster sit ‘point’ igen eller kaster 7. Kaster han 7, har han tabt. Kaster han \n" +
-                "sit ’point’, har han vundet.");
+        System.out.println("The first roll is called the 'come out roll'. The player wins immediately if the first roll is a 7\n" +
+                "or 11, and loses immediately if the first roll is a 2, 3 or 12. If the player's first roll is\n" +
+                "4, 5, 6, 8, 9 or 10, this number is established as the player's 'point'. The player then continues to\n" +
+                "throw until he either throws his 'point' again or throws a 7. If he throws a 7, he has lost. He throws\n" +
+                "his 'point', he has won.");
         System.out.println("========================================================================================================");
         System.out.println();
     }
 }
+

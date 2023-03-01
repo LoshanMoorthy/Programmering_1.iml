@@ -1,6 +1,5 @@
 import java.util.*;
 
-
 public class RollTwoDice {
 
     public static int rollCount;
