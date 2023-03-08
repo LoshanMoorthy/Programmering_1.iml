@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class E7_30 {
@@ -14,6 +15,12 @@ public class E7_30 {
             System.out.println("The list has consecutive fours");
         else
             System.out.println("The list has no consecutive fours");
+        if (isConsecutive(arr))
+            System.out.println("The list has consecutive fours");
+        else
+            System.out.println("The list has no consecutive fours");
+
+        System.out.println(Arrays.toString(minMax(arr)));
     }
 
     public static boolean isConsecutiveFour(int[] values) {
@@ -30,6 +37,21 @@ public class E7_30 {
                 if (count >= consecutive)
                     return true;
             }
+        }
+        return false;
+    }
+
+    // Metode, med hurtigere kørselstid. O(n).
+    public static boolean isConsecutive(int[] values) {
+        int count = 0;
+        int consecutive = 4;
+        for (int i = 0; i < values.length - 1; i++) {
+            if (values[i] == values[i + 1])
+                count++;
+            else
+                count = 1;
+            if (count == consecutive)
+                return true;
         }
         return false;
     }

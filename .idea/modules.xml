@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JavaFxTest/JavaFxTest.iml" filepath="$PROJECT_DIR$/JavaFxTest/JavaFxTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SystemUdvikling/Kode_Generalisering/Kode_Generalisering.iml" filepath="$PROJECT_DIR$/SystemUdvikling/Kode_Generalisering/Kode_Generalisering.iml" />
       <module fileurl="file://$PROJECT_DIR$/L01/L01.iml" filepath="$PROJECT_DIR$/L01/L01.iml" />
       <module fileurl="file://$PROJECT_DIR$/L02/L02.iml" filepath="$PROJECT_DIR$/L02/L02.iml" />
       <module fileurl="file://$PROJECT_DIR$/L03/L03.iml" filepath="$PROJECT_DIR$/L03/L03.iml" />
@@ -12,9 +13,16 @@
       <module fileurl="file://$PROJECT_DIR$/L07/L07.iml" filepath="$PROJECT_DIR$/L07/L07.iml" />
       <module fileurl="file://$PROJECT_DIR$/L08/L08.iml" filepath="$PROJECT_DIR$/L08/L08.iml" />
       <module fileurl="file://$PROJECT_DIR$/L09_1_Projekt/L09_1_Projekt.iml" filepath="$PROJECT_DIR$/L09_1_Projekt/L09_1_Projekt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L11/L11.iml" filepath="$PROJECT_DIR$/L11/L11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L12/L12.iml" filepath="$PROJECT_DIR$/L12/L12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SystemUdvikling/Kode_Generalisering/Matador/Matador.iml" filepath="$PROJECT_DIR$/SystemUdvikling/Kode_Generalisering/Matador/Matador.iml" />
       <module fileurl="file://$PROJECT_DIR$/Programmering 1.iml" filepath="$PROJECT_DIR$/Programmering 1.iml" />
       <module fileurl="file://$PROJECT_DIR$/SystemUdvikling/SystemUdvikling.iml" filepath="$PROJECT_DIR$/SystemUdvikling/SystemUdvikling.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SystemUdvikling/Kode_Generalisering/Teacher/Teacher.iml" filepath="$PROJECT_DIR$/SystemUdvikling/Kode_Generalisering/Teacher/Teacher.iml" />
       <module fileurl="file://$PROJECT_DIR$/Test/Test.iml" filepath="$PROJECT_DIR$/Test/Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L11/example_shapes/example_shapes.iml" filepath="$PROJECT_DIR$/L11/example_shapes/example_shapes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L11/examplefillstroke/examplefillstroke.iml" filepath="$PROJECT_DIR$/L11/examplefillstroke/examplefillstroke.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L11/examples/examples.iml" filepath="$PROJECT_DIR$/L11/examples/examples.iml" />
     </modules>
   </component>
 </project>
